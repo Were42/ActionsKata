@@ -48,7 +48,7 @@ jobs:
     - name: sonarcloud
       run: echo "sonarcloud"
   publish:
-    needs: [ test, sonarcloud ]
+    needs: [ test, sonarcloud, build ]
     runs-on: ubuntu-latest
     steps:
     - name: publish
